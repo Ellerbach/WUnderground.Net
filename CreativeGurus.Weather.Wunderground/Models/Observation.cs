@@ -1,104 +1,85 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace CreativeGurus.Weather.Wunderground.Models
 {
     public class Observation
     {
         [JsonProperty("date")]
-        public DateSimple Date { get; set; }
-
+        public Date Date { get; set; }
         [JsonProperty("utcdate")]
-        public DateSimple UTCDate { get; set; }
-
+        public Date UTCDATE { get; set; }
         [JsonProperty("tempm")]
-        public string Tempm { get; set; }
-
+        public float? TempCelcius { get; set; }
         [JsonProperty("tempi")]
-        public string Tempi { get; set; }
-
+        public float? TempFahrenheit { get; set; }
         [JsonProperty("dewptm")]
-        public string Dewptm { get; set; }
-
+        public float? DewPointMetric { get; set; }
         [JsonProperty("dewpti")]
-        public string Dewpti { get; set; }
-
+        public float? DewPointImparial { get; set; }
         [JsonProperty("hum")]
-        public string Hum { get; set; }
-
+        public int? Humidity { get; set; }
         [JsonProperty("wspdm")]
-        public string Wspdm { get; set; }
-
+        public float? WindSpeedMetric { get; set; }
         [JsonProperty("wspdi")]
-        public string Wspdi { get; set; }
-
+        public float? WindSpeedImperial { get; set; }
         [JsonProperty("wgustm")]
-        public string Wgustm { get; set; }
-
+        public float? WindGustMetric { get; set; }
         [JsonProperty("wgusti")]
-        public string Wgusti { get; set; }
-
+        public float? WindGurstImperial { get; set; }
         [JsonProperty("wdird")]
-        public string Wdird { get; set; }
-
+        public int? WindDirectionDegree { get; set; }
         [JsonProperty("wdire")]
-        public string Wdire { get; set; }
-
+        public string WindDirection { get; set; }
         [JsonProperty("vism")]
-        public string Vism { get; set; }
-
+        public float? VisibilityMetric { get; set; }
         [JsonProperty("visi")]
-        public string Visi { get; set; }
-
+        public float? VisibilityImperial { get; set; }
         [JsonProperty("pressurem")]
-        public string Pressurem { get; set; }
-
+        public float? PressureMetric { get; set; }
         [JsonProperty("pressurei")]
-        public string Pressurei { get; set; }
-
+        public float? PressureImperial { get; set; }
         [JsonProperty("windchillm")]
-        public string Windchillm { get; set; }
-
+        public float? WindChillMetric { get; set; }
         [JsonProperty("windchilli")]
-        public string Windchilli { get; set; }
-
+        public float? WindChillImperial { get; set; }
         [JsonProperty("heatindexm")]
-        public string Heatindexm { get; set; }
-
+        public float? HeatIndexMetric { get; set; }
         [JsonProperty("heatindexi")]
-        public string Heatindexi { get; set; }
-
+        public float? HeatIndexImperial { get; set; }
         [JsonProperty("precipm")]
-        public string Precipm { get; set; }
-
+        public float? PrecipitationMetric { get; set; }
         [JsonProperty("precipi")]
-        public string Precipi { get; set; }
-
+        public float? PrecipitationImperial { get; set; }
         [JsonProperty("conds")]
-        public string Conds { get; set; }
-
+        public string Conditions { get; set; }
         [JsonProperty("icon")]
         public string Icon { get; set; }
-
         [JsonProperty("fog")]
-        public string Fog { get; set; }
-
+        public bool Fog { get; set; }
         [JsonProperty("rain")]
-        public string Rain { get; set; }
-
+        public bool Rain { get; set; }
         [JsonProperty("snow")]
-        public string Snow { get; set; }
-
+        public bool Snow { get; set; }
         [JsonProperty("hail")]
-        public string Hail { get; set; }
-
+        public bool Hail { get; set; }
         [JsonProperty("thunder")]
-        public string Thunder { get; set; }
-
+        public bool Thunder { get; set; }
         [JsonProperty("tornado")]
-        public string Tornado { get; set; }
-
+        public bool Tornado { get; set; }
         [JsonProperty("metar")]
         public string Metar { get; set; }
+
+        [JsonProperty("precip_ratem")]
+        public float? PrecipitationRateMetric{ get; set; }
+        [JsonProperty("precip_ratei")]
+        public float? PrecipitationRateImperial { get; set; }
+        [JsonProperty("precip_totalm")]
+        public float? PrecipitationTotalMetric { get; set; }
+        [JsonProperty("precip_totali")]
+        public float? PrecipitationTotalImperial { get; set; }
+        [JsonProperty("solarradiation")]
+        public string SolarRadiation { get; set; }
+        [JsonProperty("softwaretype")]
+        public string SoftwareType { get; set; }
     }
 }
